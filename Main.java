@@ -104,9 +104,9 @@ public class Main {
                                             
                                             }
 
-                                            // for(User guest : users){
-                                            //     guest.displayInfo();
-                                            // }
+                                            for(User guest : users){
+                                                guest.displayInfo();
+                                            }
 
                                         }
 
