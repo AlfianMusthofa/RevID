@@ -40,7 +40,7 @@ public class Main {
                         System.out.print("No.Ponsel : ");
                         ponsel = input.nextInt();
 
-                        regulerUser = new Regular(username, password, nik, ponsel);
+                        regulerUser = new Regular(username, password, nik, ponsel, 0, 0, 0, "", "");
 
                         System.out.println("Regsitrasi berhasil! silakan login!");
 
@@ -66,52 +66,46 @@ public class Main {
                                 switch (pil_menu) {
                                     case 1: //KERETA
                                         
-                                        System.out.print("Tanggal pergi    : ");
-                                        int tanggalPergi = input.nextInt();
+                                        System.out.print("Dari : ");
+                                        String dari = input.next();
+                                        System.out.print("ke   : ");
+                                        String ke = input.next();
                                         System.out.print("Jumlah penumpang : ");
                                         int jumlahpenumpang = input.nextInt();
-                                        System.out.println("--------------");
-                                        System.out.println("1. Argo Bromo");
-                                        System.out.println("2. Parahyangan");
-                                        System.out.println("--------------");
-                                        System.out.print("Pilihan kereta : ");
-                                        int pilihanKereta = input.nextInt();
-                                        System.out.print("No.Kursi : ");
-                                        int NoKursi = input.nextInt();
-
-                                        if (jumlahpenumpang == 1) {
-
-                                            regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta);
-                                            regulerUser.displayInfo();
-                                        }
-
-                                        else if(jumlahpenumpang > 1){
-
-                                            for (int i = 1; i < jumlahpenumpang; i++) {
+                                        System.out.println("-----------------");
+                                        System.out.println("Mode perjalanan");
+                                        System.out.println("1. Sekali jalan");
+                                        System.out.println("2. Pulang pergi");
+                                        System.out.println("-----------------");
+                                        System.out.print("pilihan : ");
+                                        int modeJalan = input.nextInt();
+                                        
+                                        switch (modeJalan) {
+                                            case 1: // Sekali jalan
                                                 
-                                                System.out.println("Data penumpang ke " + (i+1));
-                                                System.out.print("Username : ");
-                                                String guestUsername = input.next();
-                                                System.out.print("NIK      : ");
-                                                int guestNik = input.nextInt();
-                                                System.out.print("No.Ponsel  : ");
-                                                int guestPonsel = input.nextInt();
+                                                System.out.print("Masukkan tanggal pergi : ");
+                                                int tanggalPergi = input.nextInt();
+                                                System.out.println("1. Argo Bromo");
+                                                System.out.println("2. Parahyangan");
+                                                System.out.print("Pilihan : ");
+                                                int pilihanKereta = input.nextInt();
+                                                System.out.print("Masukkan No.Kursi : ");
+                                                int NoKursi = input.nextInt();
 
-                                                regulerUser = new KeretaApi(guestUsername, loginPassword, guestNik, guestPonsel, tanggalPergi, NoKursi, pilihanKereta);
-                                                User guestUser = new Guest(guestUsername, "", guestNik, guestPonsel);
-                                                users.add(guestUser);
-                                                regulerUser.displayInfo();
-                                            
-                                            }
+                                                if (jumlahpenumpang == 1) {
+                                                    regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta, dari, ke);
+                                                    regulerUser.displayInfo();
+                                                    users.add(regulerUser);
+                                                }
 
-                                            for(User guest : users){
-                                                guest.displayInfo();
-                                            }
-
+                                                break;
+                                        
+                                            default: // 2x jalan
+                                                break;
                                         }
 
                                         break;
-                                
+
                                     default: // Lain-lain
                                         break;
                                 }
