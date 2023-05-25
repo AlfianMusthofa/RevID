@@ -27,7 +27,7 @@ public class KeretaApi extends User {
         }
 
         System.out.println("------------------------------");
-        System.out.println("-            Ticket           ");
+        System.out.println("-            Ticket          -");
         System.out.println("------------------------------");
         System.out.println("Nama          : " + getUsername());
         System.out.println("NIK           : " + getNik());
