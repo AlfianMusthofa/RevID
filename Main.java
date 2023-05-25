@@ -105,7 +105,15 @@ public class Main {
                                                         String guestUsername = input.next();
                                                         System.out.print("NIK  : ");
                                                         int guestNIK = input.nextInt();
+                                                        System.out.print("No.Kursi  : ");
+                                                        int guestNoKursi = input.nextInt();
+                                                        System.out.print("No.Ponsel : ");
+                                                        int guestNoponsel = input .nextInt();
+                                                        KeretaApi guest = new KeretaApi(guestUsername, "", guestNIK, guestNoponsel, tanggalPergi, guestNoKursi, pilihanKereta, dari, ke);
+                                                        guest.displayInfo();
+                                                        users.add(guest);
                                                     }
+
                                                 }
 
                                                 break;

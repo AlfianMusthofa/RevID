@@ -45,6 +45,7 @@ public class KeretaApi extends User {
         System.out.println("Tanggal Pergi : " + this.tanggalPergi);
         System.out.println("No.Kursi      : " + getNokursi());
         System.out.println("Nama Kereta   : " + namaKereta);
+        System.out.println("------------------------------");
 
     }
 
