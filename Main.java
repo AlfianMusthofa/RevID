@@ -70,6 +70,10 @@ public class Main {
                                         int tanggalPergi = input.nextInt();
                                         System.out.println("Jumlah penumpang");
                                         int jumlahpenumpang = input.nextInt();
+                                        System.out.println("--------------");
+                                        System.out.println("1. Argo Bromo");
+                                        System.out.println("2. Parahyangan");
+                                        System.out.println("--------------");
                                         System.out.println("Pilihan kereta : ");
                                         int pilihanKereta = input.nextInt();
                                         System.out.println("No.Kursi : ");
