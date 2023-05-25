@@ -66,17 +66,17 @@ public class Main {
                                 switch (pil_menu) {
                                     case 1: //KERETA
                                         
-                                        System.out.print("Tanggal pergi : ");
+                                        System.out.print("Tanggal pergi    : ");
                                         int tanggalPergi = input.nextInt();
-                                        System.out.println("Jumlah penumpang");
+                                        System.out.print("Jumlah penumpang : ");
                                         int jumlahpenumpang = input.nextInt();
                                         System.out.println("--------------");
                                         System.out.println("1. Argo Bromo");
                                         System.out.println("2. Parahyangan");
                                         System.out.println("--------------");
-                                        System.out.println("Pilihan kereta : ");
+                                        System.out.print("Pilihan kereta : ");
                                         int pilihanKereta = input.nextInt();
-                                        System.out.println("No.Kursi : ");
+                                        System.out.print("No.Kursi : ");
                                         int NoKursi = input.nextInt();
 
                                         if (jumlahpenumpang == 1) {
