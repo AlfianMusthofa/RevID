@@ -17,6 +17,7 @@ public class Main {
             int nik = 0;
             int ponsel = 0;
             User regulerUser = null;
+            User guestUser = null;
             List<User> users = new ArrayList<>();
 
             do {
@@ -109,9 +110,15 @@ public class Main {
                                                         int guestNoKursi = input.nextInt();
                                                         System.out.print("No.Ponsel : ");
                                                         int guestNoponsel = input .nextInt();
-                                                        KeretaApi guest = new KeretaApi(guestUsername, "", guestNIK, guestNoponsel, tanggalPergi, guestNoKursi, pilihanKereta, dari, ke);
-                                                        guest.displayInfo();
-                                                        users.add(guest);
+                                                        
+                                                        guestUser = new Guest(guestUsername, "", guestNIK, guestNoponsel, guestNoKursi, guestNoponsel);
+                                                        guestUser = new KeretaApi(guestUsername, "", guestNIK, guestNoponsel, tanggalPergi, guestNoKursi, pilihanKereta, dari, ke);
+                                                        regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta, dari, ke);
+                                                        regulerUser.displayInfo();
+                                                        guestUser.displayInfo();
+                                                        users.add(guestUser);
+                                                        users.add(regulerUser);
+                                                        
                                                     }
 
                                                 }
@@ -119,6 +126,7 @@ public class Main {
                                                 break;
                                         
                                             default: // 2x jalan
+                                                System.out.println("Coming Soon!");
                                                 break;
                                         }
 
