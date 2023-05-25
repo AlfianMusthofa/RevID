@@ -103,6 +103,8 @@ public class Main {
                                                         System.out.println("Masukkan data penumpang ke " + (i+1));
                                                         System.out.print("Nama : ");
                                                         String guestUsername = input.next();
+                                                        System.out.print("NIK  : ");
+                                                        int guestNIK = input.nextInt();
                                                     }
                                                 }
 
