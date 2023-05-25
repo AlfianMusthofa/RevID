@@ -3,9 +3,15 @@
  */
 public class Guest extends User {
 
-    public Guest(String username, String password, int nik, int ponsel) {
+    int noKursi;
+
+    public Guest(String username, String password, int nik, int ponsel, int noKursi) {
         super(username, password, nik, ponsel);
-        //TODO Auto-generated constructor stub
+        this.noKursi = noKursi;
+    }
+
+    public int getNoKursi(){
+        return noKursi;
     }
 
     @Override

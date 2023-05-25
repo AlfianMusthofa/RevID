@@ -18,6 +18,10 @@ public class KeretaApi extends User {
         this.ke = ke;
     }
 
+    public int getNokursi(){
+        return NoKursi;
+    }
+
     @Override
     public void displayInfo() {
         
@@ -39,7 +43,7 @@ public class KeretaApi extends User {
         System.out.println("Dari          : " + this.dari);
         System.out.println("Ke            : " + this.ke);
         System.out.println("Tanggal Pergi : " + this.tanggalPergi);
-        System.out.println("No.Kursi      : " + this.NoKursi);
+        System.out.println("No.Kursi      : " + getNokursi());
         System.out.println("Nama Kereta   : " + namaKereta);
 
     }
