@@ -98,6 +98,14 @@ public class Main {
                                                     users.add(regulerUser);
                                                 }
 
+                                                else if (jumlahpenumpang > 1) {
+                                                    for (int i = 1; i < jumlahpenumpang; i++) {
+                                                        System.out.println("Masukkan data penumpang ke " + (i+1));
+                                                        System.out.print("Nama : ");
+                                                        String guestUsername = input.next();
+                                                    }
+                                                }
+
                                                 break;
                                         
                                             default: // 2x jalan
