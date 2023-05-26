@@ -84,13 +84,13 @@ public class Main {
                                         switch (modeJalan) {
                                             case 1: // Sekali jalan
                                                 
-                                                System.out.print("Masukkan tanggal pergi : ");
+                                                System.out.print("Tanggal pergi : ");
                                                 int tanggalPergi = input.nextInt();
                                                 System.out.println("1. Argo Bromo");
                                                 System.out.println("2. Parahyangan");
-                                                System.out.print("Pilihan : ");
+                                                System.out.print("Pilihan  : ");
                                                 int pilihanKereta = input.nextInt();
-                                                System.out.print("Masukkan No.Kursi : ");
+                                                System.out.print("No.Kursi : ");
                                                 int NoKursi = input.nextInt();
 
                                                 if (jumlahpenumpang == 1) {
@@ -106,15 +106,17 @@ public class Main {
                                                     //regulerUser.displayInfo();
 
                                                     for (int i = 1; i < jumlahpenumpang; i++) {
+                                                        System.out.println("--------------------------");
                                                         System.out.println("Masukkan data penumpang ke " + (i+1));
-                                                        System.out.print("Nama : ");
+                                                        System.out.print("Nama      : ");
                                                         String guestUsername = input.next();
-                                                        System.out.print("NIK  : ");
+                                                        System.out.print("NIK       : ");
                                                         int guestNIK = input.nextInt();
                                                         System.out.print("No.Kursi  : ");
                                                         int guestNoKursi = input.nextInt();
                                                         System.out.print("No.Ponsel : ");
                                                         int guestNoponsel = input .nextInt();
+                                                        System.out.println("--------------------------");
                                                         
                                                         guestUser = new Guest(guestUsername, "", guestNIK, guestNoponsel, guestNoKursi, guestNoponsel);
                                                         guestUser = new KeretaApi(guestUsername, "", guestNIK, guestNoponsel, tanggalPergi, guestNoKursi, pilihanKereta, dari, ke);
