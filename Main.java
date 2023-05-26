@@ -95,11 +95,16 @@ public class Main {
 
                                                 if (jumlahpenumpang == 1) {
                                                     regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta, dari, ke);
-                                                    regulerUser.displayInfo();
                                                     users.add(regulerUser);
+                                                    //regulerUser.displayInfo();
                                                 }
 
                                                 else if (jumlahpenumpang > 1) {
+
+                                                    regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta, dari, ke);
+                                                    users.add(regulerUser);
+                                                    //regulerUser.displayInfo();
+
                                                     for (int i = 1; i < jumlahpenumpang; i++) {
                                                         System.out.println("Masukkan data penumpang ke " + (i+1));
                                                         System.out.print("Nama : ");
@@ -113,14 +118,18 @@ public class Main {
                                                         
                                                         guestUser = new Guest(guestUsername, "", guestNIK, guestNoponsel, guestNoKursi, guestNoponsel);
                                                         guestUser = new KeretaApi(guestUsername, "", guestNIK, guestNoponsel, tanggalPergi, guestNoKursi, pilihanKereta, dari, ke);
-                                                        regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta, dari, ke);
-                                                        regulerUser.displayInfo();
-                                                        guestUser.displayInfo();
+                                                        // regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta, dari, ke);
+                                                        // regulerUser.displayInfo();
                                                         users.add(guestUser);
-                                                        users.add(regulerUser);
+                                                        //guestUser.displayInfo();
+                                                        // users.add(regulerUser);
                                                         
                                                     }
 
+                                                }
+
+                                                for(User user : users){
+                                                    user.displayInfo();
                                                 }
 
                                                 break;
