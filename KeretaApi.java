@@ -8,18 +8,24 @@ public class KeretaApi extends User {
     private int pilihanKereta;
     private String dari;
     private String ke;
+    private int harga;
 
-    public KeretaApi(String username, String password, int nik, int ponsel, int tanggalPergi, int NoKursi, int pilihanKereta, String dari, String ke) {
+    public KeretaApi(String username, String password, int nik, int ponsel, int tanggalPergi, int NoKursi, int pilihanKereta, String dari, String ke, int harga) {
         super(username, password, nik, ponsel);
         this.tanggalPergi = tanggalPergi;
         this.NoKursi = NoKursi;
         this.pilihanKereta = pilihanKereta;
         this.dari = dari;
         this.ke = ke;
+        this.harga = harga;
     }
 
     public int getNokursi(){
         return NoKursi;
+    }
+
+    public int getHarga(){
+        return harga;
     }
 
     @Override
