@@ -94,17 +94,24 @@ public class Main {
                                                 int NoKursi = input.nextInt();
 
                                                 if (jumlahpenumpang == 1) {
-                                                    regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta, dari, ke, 50000);
+                                                    
+                                                    KeretaApiBuilder builder = new KeretaApiBuilder(loginUsername, loginPassword, nik, ponsel)
+                                                    .setDari(dari)
+                                                    .setKe(ke)
+                                                    .setTanggalPergi(tanggalPergi)
+                                                    .setPilihanKereta(pilihanKereta)
+                                                    .setNoKursi(NoKursi);
+
+                                                    regulerUser = builder.build();
+                                                    
                                                     users.add(regulerUser);
-                                                    //regulerUser.displayInfo();
                                                 }
 
                                                 else if (jumlahpenumpang > 1) {
 
-                                                    regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta, dari, ke, 50000);
+                                                    // regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta, dari, ke);
                                                     users.add(regulerUser);
-                                                    //regulerUser.displayInfo();
-
+                       
                                                     for (int i = 1; i < jumlahpenumpang; i++) {
                                                         System.out.println("--------------------------");
                                                         System.out.println("Masukkan data penumpang ke " + (i+1));
@@ -119,7 +126,7 @@ public class Main {
                                                         System.out.println("--------------------------");
                                                         
                                                         guestUser = new Guest(guestUsername, "", guestNIK, guestNoponsel, guestNoKursi, guestNoponsel);
-                                                        guestUser = new KeretaApi(guestUsername, "", guestNIK, guestNoponsel, tanggalPergi, guestNoKursi, pilihanKereta, dari, ke, 50000);
+                                                        // guestUser = new KeretaApi(guestUsername, "", guestNIK, guestNoponsel, tanggalPergi, guestNoKursi, pilihanKereta, dari, ke);
                                                         users.add(guestUser);
                                                         
                                                         

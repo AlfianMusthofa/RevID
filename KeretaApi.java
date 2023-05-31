@@ -8,37 +8,25 @@ public class KeretaApi extends User {
     private int pilihanKereta;
     private String dari;
     private String ke;
-    private int harga;
 
-    public KeretaApi(String username, String password, int nik, int ponsel, int tanggalPergi, int NoKursi, int pilihanKereta, String dari, String ke, int harga) {
-        super(username, password, nik, ponsel);
-        this.tanggalPergi = tanggalPergi;
-        this.NoKursi = NoKursi;
-        this.pilihanKereta = pilihanKereta;
-        this.dari = dari;
-        this.ke = ke;
-        this.harga = harga;
+    public KeretaApi(KeretaApiBuilder builder) {
+        super(builder.username, builder.password, builder.nik, builder.ponsel);
+        this.tanggalPergi = builder.tanggalPergi;
+        this.NoKursi = builder.NoKursi;
+        this.pilihanKereta = builder.pilihanKereta;
+        this.dari = builder.dari;
+        this.ke = builder.ke;
     }
 
     public int getNokursi(){
         return NoKursi;
     }
 
-    public int getHarga(){
-        return harga;
-    }
 
     @Override
     public void displayInfo() {
         
-        String namaKereta = "";
-
-        if (pilihanKereta == 1) {
-            namaKereta = "Argo Bromo";
-        }
-        else {
-            namaKereta = "Parahyangan";
-        }
+        String namaKereta = (pilihanKereta == 1) ? "Argo Bromo" : "Parahyangan";
 
         System.out.println("------------------------------");
         System.out.println("-           Ticket           -");
