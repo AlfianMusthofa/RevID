@@ -109,7 +109,14 @@ public class Main {
 
                                                 else if (jumlahpenumpang > 1) {
 
-                                                    // regulerUser = new KeretaApi(loginUsername, loginPassword, nik, ponsel, tanggalPergi, NoKursi, pilihanKereta, dari, ke);
+                                                    KeretaApiBuilder builder = new KeretaApiBuilder(loginUsername, loginPassword, nik, ponsel)
+                                                    .setDari(dari)
+                                                    .setKe(ke)
+                                                    .setTanggalPergi(tanggalPergi)
+                                                    .setPilihanKereta(pilihanKereta)
+                                                    .setNoKursi(NoKursi);
+
+                                                    regulerUser = builder.build();
                                                     users.add(regulerUser);
                        
                                                     for (int i = 1; i < jumlahpenumpang; i++) {
@@ -126,7 +133,13 @@ public class Main {
                                                         System.out.println("--------------------------");
                                                         
                                                         guestUser = new Guest(guestUsername, "", guestNIK, guestNoponsel, guestNoKursi, guestNoponsel);
-                                                        // guestUser = new KeretaApi(guestUsername, "", guestNIK, guestNoponsel, tanggalPergi, guestNoKursi, pilihanKereta, dari, ke);
+                                            
+                                                        KeretaApiBuilder builder2 = new KeretaApiBuilder(guestUsername, loginPassword, guestNIK, guestNoponsel)
+                                                        .setNoKursi(guestNoKursi)
+                                                        .setTanggalPergi(tanggalPergi)
+                                                        .setDari(dari)
+                                                        .setKe(ke);
+                                                        guestUser = builder2.build();
                                                         users.add(guestUser);
                                                         
                                                         
