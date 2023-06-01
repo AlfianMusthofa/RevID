@@ -5,6 +5,7 @@ public class KeretaApiBuilder {
     protected int nik;
     protected int ponsel;
     protected int tanggalPergi;
+    protected int tanggalPulang;
     protected int NoKursi;
     protected int pilihanKereta;
     protected String dari;
@@ -39,6 +40,11 @@ public class KeretaApiBuilder {
 
     public KeretaApiBuilder setKe(String ke){
         this.ke = ke;
+        return this;
+    }
+
+    public KeretaApiBuilder setTanggalPulang(int tanggalPulang){
+        this.tanggalPulang = tanggalPulang;
         return this;
     }
 
