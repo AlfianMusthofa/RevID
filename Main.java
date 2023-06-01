@@ -30,16 +30,18 @@ public class Main {
 
                 switch (pilihan) {
                     case 1:
-                        
-                        System.out.println("Registrasi");
-                        System.out.print("Username  : ");
+                        System.out.println("-----------------------------");
+                        System.out.println("|         Registrasi        |");
+                        System.out.println("-----------------------------");
+                        System.out.print("| Username  : ");
                         username = input.next();
-                        System.out.print("Password  : ");
+                        System.out.print("| Password  : ");
                         password = input.next();
-                        System.out.print("NIK       : ");
+                        System.out.print("| NIK       : ");
                         nik = input.nextInt();
-                        System.out.print("No.Ponsel : ");
+                        System.out.print("| No.Ponsel : ");
                         ponsel = input.nextInt();
+                        System.out.println("-----------------------------");
 
                         regulerUser = new Regular(username, password, nik, ponsel, 0, 0, 0, "", "");
                         System.out.println("---------------------------------------");
