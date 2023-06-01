@@ -156,52 +156,7 @@ public class Main {
                                                 break;
                                         
                                             default: // 2x jalan
-                                                System.out.print("Tanggal Pergi  : ");
-                                                int tanggalPergi2 = input.nextInt();
-                                                System.out.print("Tanggal Pulang : ");
-                                                int tanggalPulang = input.nextInt();
-                                                System.out.println("1. Argo Bromo");
-                                                System.out.println("2. Parahyangan");
-                                                System.out.print("Pilihan  : ");
-                                                int pilihanKereta2 = input.nextInt();
-                                                System.out.print("No.Kursi : ");
-                                                int noKursi2 = input.nextInt();
-
-                                                if (jumlahpenumpang == 1) {
-                                                    KeretaApiBuilder builder = new KeretaApiBuilder(loginUsername, loginPassword, nik, ponsel)
-                                                    .setTanggalPergi(tanggalPergi2)
-                                                    .setTanggalPulang(tanggalPulang)
-                                                    .setPilihanKereta(pilihanKereta2)
-                                                    .setNoKursi(noKursi2)
-                                                    .setDari(dari)
-                                                    .setKe(ke);
-                                                    regulerUser = builder.build();
-                                                    users.add(regulerUser);
-                                                }
-
-                                                else if(jumlahpenumpang > 1){
-
-                                                    KeretaApiBuilder builder = new KeretaApiBuilder(loginUsername, loginPassword, nik, ponsel)
-                                                    .setDari(dari)
-                                                    .setKe(ke)
-                                                    .setTanggalPergi(tanggalPergi2)
-                                                    .setPilihanKereta(pilihanKereta2)
-                                                    .setNoKursi(noKursi2);
-
-                                                    regulerUser = builder.build();
-                                                    users.add(regulerUser);
-
-                                                    for (int i = 1; i < jumlahpenumpang; i++) {
-                                                        
-                                                        //GuestUser
-
-                                                    }
-                                                }
-
-                                                for (User user : users){
-                                                    user.displayInfo();
-                                                }
-                                                
+                                                System.out.println("Coming Soon!");
                                                 break;
                                         }
 
