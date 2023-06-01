@@ -4,6 +4,7 @@
 public class KeretaApi extends User {
 
     private int tanggalPergi;
+    private int tanggalPulang;
     private int NoKursi;
     private int pilihanKereta;
     private String dari;
@@ -16,6 +17,7 @@ public class KeretaApi extends User {
         this.pilihanKereta = builder.pilihanKereta;
         this.dari = builder.dari;
         this.ke = builder.ke;
+        this.tanggalPulang = builder.tanggalPulang;
     }
 
     public int getNokursi(){
@@ -37,6 +39,7 @@ public class KeretaApi extends User {
         System.out.println("Dari          : " + this.dari);
         System.out.println("Ke            : " + this.ke);
         System.out.println("Tanggal Pergi : " + this.tanggalPergi);
+        System.out.println("Tanggal pulang : " + this.tanggalPulang);
         System.out.println("No.Kursi      : " + getNokursi());
         System.out.println("Nama Kereta   : " + namaKereta);
         System.out.println("------------------------------");
