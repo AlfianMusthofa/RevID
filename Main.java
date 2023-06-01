@@ -21,7 +21,7 @@ public class Main {
             List<User> users = new ArrayList<>();
 
             do {
-                
+                ClearScreen.clearScreen();
                 System.out.println("Main Menu");
                 System.out.println("1. Registrasi");
                 System.out.println("2. Login");
@@ -42,18 +42,21 @@ public class Main {
                         ponsel = input.nextInt();
 
                         regulerUser = new Regular(username, password, nik, ponsel, 0, 0, 0, "", "");
-
-                        System.out.println("Regsitrasi berhasil! silakan login!");
+                        System.out.println("---------------------------------------");
+                        System.out.println("| Registrasi berhasil! silakan login! |");
+                        System.out.println("---------------------------------------");
 
                         break;
                 
                     default:
-
-                        System.out.println("Login");
-                        System.out.print("Username    : ");
+                        System.out.println("-----------------------------");
+                        System.out.println("|           Login           |");
+                        System.out.println("-----------------------------");
+                        System.out.print("| Username    : ");
                         String loginUsername = input.next();
-                        System.out.print("Password    : ");
+                        System.out.print("| Password    : ");
                         String loginPassword = input.next();
+                        System.out.println("-----------------------------");
 
                         if (loginUsername.equals(username) && loginPassword.equals(password)) {
                             System.out.println("Login berhasil!");
@@ -215,7 +218,9 @@ public class Main {
                         }
 
                         else {
-                            System.out.println("Login gagal!");
+                            System.out.println("---------------------------------------------");
+                            System.out.println("| Login gagal! Username atau Password salah!|");
+                            System.out.println("---------------------------------------------");
                         }
 
                         break;
