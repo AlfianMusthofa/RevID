@@ -4,7 +4,7 @@
 public class KeretaApi extends User {
 
     private int tanggalPergi;
-    private int tanggalPulang;
+    private int tanggalPulang = 0;
     private int NoKursi;
     private int pilihanKereta;
     private String dari;
@@ -33,15 +33,15 @@ public class KeretaApi extends User {
         System.out.println("------------------------------");
         System.out.println("-           Ticket           -");
         System.out.println("------------------------------");
-        System.out.println("Nama          : " + getUsername());
-        System.out.println("NIK           : " + getNik());
-        System.out.println("Ponsel        : " + getPonsel());
-        System.out.println("Dari          : " + this.dari);
-        System.out.println("Ke            : " + this.ke);
-        System.out.println("Tanggal Pergi : " + this.tanggalPergi);
-        System.out.println("Tanggal pulang : " + this.tanggalPulang);
-        System.out.println("No.Kursi      : " + getNokursi());
-        System.out.println("Nama Kereta   : " + namaKereta);
+        System.out.println("Nama           : " + getUsername());
+        System.out.println("NIK            : " + getNik());
+        System.out.println("Ponsel         : " + getPonsel());
+        System.out.println("Dari           : " + this.dari);
+        System.out.println("Ke             : " + this.ke);
+        System.out.println("Tanggal Pergi  : " + this.tanggalPergi);
+        System.out.println("Tanggal Pulang : " + this.tanggalPulang);
+        System.out.println("No.Kursi       : " + getNokursi());
+        System.out.println("Nama Kereta    : " + namaKereta);
         System.out.println("------------------------------");
 
     }
