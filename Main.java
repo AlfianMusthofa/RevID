@@ -25,6 +25,8 @@ public class Main {
                 System.out.println("Main Menu");
                 System.out.println("1. Registrasi");
                 System.out.println("2. Login");
+                System.out.println("3. Beli Saldo TicketWallet");
+                System.out.println("4. Cek Saldo TicketWallet");
                 System.out.print("Pilihan : ");
                 int pilihan = input.nextInt();
 
