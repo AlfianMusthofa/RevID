@@ -20,6 +20,7 @@ public class Main {
             User guestUser = null;
             List<User> users = new ArrayList<>();
             TicketWallet wallet = new TicketWallet();
+            int hargaTiket = 0;
 
             do {
                 ClearScreen.clearScreen();
@@ -111,6 +112,8 @@ public class Main {
                                                     .setNoKursi(NoKursi);
 
                                                     regulerUser = builder.build();
+
+                                                    hargaTiket = 50000;
                                                     
                                                     users.add(regulerUser);
                                                 }
@@ -146,13 +149,17 @@ public class Main {
                                                         .setNoKursi(guestNoKursi)
                                                         .setTanggalPergi(tanggalPergi)
                                                         .setDari(dari)
-                                                        .setKe(ke);
+                                                        .setKe(ke)
+                                                        .setPilihanKereta(pilihanKereta);
                                                         guestUser = builder2.build();
+                                                        hargaTiket = 50000 * jumlahpenumpang;
                                                         users.add(guestUser);
                                                   
                                                     }
 
                                                 }
+
+                                                System.out.println("Total Pembayaran Rp." + hargaTiket);
 
                                                 for(User user : users){
                                                     user.displayInfo();
