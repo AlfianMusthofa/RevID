@@ -10,14 +10,12 @@ public class KeretaApiBuilder {
     protected int pilihanKereta;
     protected String dari;
     protected String ke;
-    protected int harga = 50000;
 
-    public KeretaApiBuilder(String username, String password, int nik, int ponsel, int harga){
+    public KeretaApiBuilder(String username, String password, int nik, int ponsel){
         this.username = username;
         this.password = password;
         this.nik = nik;
         this.ponsel = ponsel;
-        this.harga = harga;
     }
 
     public KeretaApiBuilder setTanggalPergi(int tanggalPergi){
@@ -47,11 +45,6 @@ public class KeretaApiBuilder {
 
     public KeretaApiBuilder setTanggalPulang(int tanggalPulang){
         this.tanggalPulang = tanggalPulang;
-        return this;
-    }
-
-    public KeretaApiBuilder setHarga(int harga){
-        this.harga = harga;
         return this;
     }
 

@@ -103,7 +103,7 @@ public class Main {
 
                                                 if (jumlahpenumpang == 1) {
                                                     
-                                                    KeretaApiBuilder builder = new KeretaApiBuilder(loginUsername, loginPassword, nik, ponsel, 50000)
+                                                    KeretaApiBuilder builder = new KeretaApiBuilder(loginUsername, loginPassword, nik, ponsel)
                                                     .setDari(dari)
                                                     .setKe(ke)
                                                     .setTanggalPergi(tanggalPergi)
@@ -117,7 +117,7 @@ public class Main {
 
                                                 else if (jumlahpenumpang > 1) {
 
-                                                    KeretaApiBuilder builder = new KeretaApiBuilder(loginUsername, loginPassword, nik, ponsel, 50000)
+                                                    KeretaApiBuilder builder = new KeretaApiBuilder(loginUsername, loginPassword, nik, ponsel)
                                                     .setDari(dari)
                                                     .setKe(ke)
                                                     .setTanggalPergi(tanggalPergi)
@@ -142,7 +142,7 @@ public class Main {
                                                         
                                                         guestUser = new Guest(guestUsername, "", guestNIK, guestNoponsel, guestNoKursi, guestNoponsel);
                                             
-                                                        KeretaApiBuilder builder2 = new KeretaApiBuilder(guestUsername, "", guestNIK, guestNoponsel, 50000)
+                                                        KeretaApiBuilder builder2 = new KeretaApiBuilder(guestUsername, "", guestNIK, guestNoponsel)
                                                         .setNoKursi(guestNoKursi)
                                                         .setTanggalPergi(tanggalPergi)
                                                         .setDari(dari)
