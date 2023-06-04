@@ -31,7 +31,7 @@ public class Main {
                 int pilihan = input.nextInt();
 
                 switch (pilihan) {
-                    case 1:
+                    case 1: // Registrasi
                         System.out.println("-----------------------------");
                         System.out.println("|         Registrasi        |");
                         System.out.println("-----------------------------");
@@ -52,7 +52,7 @@ public class Main {
 
                         break;
                 
-                    default:
+                    case 2: // Login
                         System.out.println("-----------------------------");
                         System.out.println("|           Login           |");
                         System.out.println("-----------------------------");
