@@ -167,7 +167,7 @@ public class Main {
 
                                                     wallet.bayarTiket(hargaTiket);
                                                     
-                                                    for(User user : users){
+                                                    for(User user : users){                              
                                                         user.displayInfo();
                                                     }
                                                     

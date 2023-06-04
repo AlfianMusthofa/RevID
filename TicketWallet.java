@@ -29,4 +29,8 @@ public class TicketWallet {
     public int getNominal(){
         return nominal;
     }
+
+    public void setSaldo(int nominal){
+        this.nominal = nominal;
+    }
 }
