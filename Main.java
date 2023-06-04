@@ -19,6 +19,7 @@ public class Main {
             User regulerUser = null;
             User guestUser = null;
             List<User> users = new ArrayList<>();
+            TicketWallet wallet = new TicketWallet();
 
             do {
                 ClearScreen.clearScreen();
@@ -181,6 +182,21 @@ public class Main {
                             System.out.println("| Login gagal! Username atau Password salah!|");
                             System.out.println("---------------------------------------------");
                         }
+
+                        break;
+                    
+                    case 3:
+
+                        System.out.print("Masukkan nominal Rp.");
+                        int nominalBeli = input.nextInt();
+
+                        wallet.beliSaldo(nominalBeli);
+
+                        break;
+                    
+                    default:
+
+                        wallet.cekSaldo();
 
                         break;
                 }

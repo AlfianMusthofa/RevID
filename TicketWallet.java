@@ -7,6 +7,7 @@ public class TicketWallet {
 
     public void beliSaldo(int nominal){
         this.nominal += nominal;
+        System.out.println("Pembelian berhasil!");
     }
 
     public void cekSaldo(){

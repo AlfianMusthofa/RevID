@@ -9,6 +9,7 @@ public class KeretaApi extends User {
     private int pilihanKereta;
     private String dari;
     private String ke;
+    private int harga = 50000;
 
     public KeretaApi(KeretaApiBuilder builder) {
         super(builder.username, builder.password, builder.nik, builder.ponsel);
@@ -22,6 +23,10 @@ public class KeretaApi extends User {
 
     public int getNokursi(){
         return NoKursi;
+    }
+
+    public int getHarga(){
+        return harga;
     }
 
 
