@@ -171,9 +171,7 @@ public class Main {
                                                         user.displayInfo();
                                                     }
                                                     
-                                                    
                                                 }
-
 
                                                 break;
                                         
