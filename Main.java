@@ -160,10 +160,19 @@ public class Main {
                                                 }
 
                                                 System.out.println("Total Pembayaran Rp." + hargaTiket);
+                                                System.out.print("Masukkan nominal bayar Rp.");
+                                                int nominalBayar = input.nextInt();
 
-                                                for(User user : users){
-                                                    user.displayInfo();
+                                                if (nominalBayar >= hargaTiket) {
+
+                                                    wallet.bayarTiket(hargaTiket);
+                                                    
+                                                    for(User user : users){
+                                                        user.displayInfo();
+                                                    }
+                                                    
                                                 }
+
 
                                                 break;
                                         
