@@ -25,4 +25,8 @@ public class TicketWallet {
             System.out.println("Saldo tidak cukup!");
         }
     }
+
+    public int getNominal(){
+        return nominal;
+    }
 }
