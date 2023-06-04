@@ -160,7 +160,7 @@ public class Main {
                                                 }
 
                                                 System.out.println("Total Pembayaran Rp." + hargaTiket);
-                                                System.out.print("Masukkan nominal bayar Rp.");
+                                                System.out.print("Masukkan nominal bayar Rp."); 
                                                 int nominalBayar = input.nextInt();
 
                                                 if (nominalBayar >= hargaTiket) {
