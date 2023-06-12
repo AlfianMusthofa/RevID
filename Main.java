@@ -158,7 +158,8 @@ public class Main {
                                                     }
 
                                                 }
-
+                                                
+                                                // Sistem Pembayaran Tiket
                                                 System.out.println("Total Pembayaran Rp." + hargaTiket);
                                                 System.out.print("Masukkan nominal bayar Rp."); 
                                                 int nominalBayar = input.nextInt();
