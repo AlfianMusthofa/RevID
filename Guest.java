@@ -6,8 +6,8 @@ public class Guest extends User {
     int noKursi;
     int noPonsel;
 
-    public Guest(String username, String password, int nik, int ponsel, int noKursi, int noPonsel) {
-        super(username, password, nik, ponsel);
+    public Guest(String username, String password, int guestNIK, int guestNoponsel, int noKursi, int noPonsel) {
+        super(username, password, guestNIK, guestNoponsel);
         this.noKursi = noKursi;
         this.noPonsel = noPonsel;
     }
