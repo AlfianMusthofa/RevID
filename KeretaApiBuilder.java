@@ -11,7 +11,7 @@ public class KeretaApiBuilder {
     protected String dari;
     protected String ke;
 
-    public KeretaApiBuilder(String username, String password, int nik, int ponsel){
+    public KeretaApiBuilder(String username, String password, int hargaTiket, int noKursi, int nik, int ponsel){
         this.username = username;
         this.password = password;
         this.nik = nik;
